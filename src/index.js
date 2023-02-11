@@ -1,14 +1,17 @@
 module.exports = function reverse (n) {
-    n = String(n);
-    let stringToArray = n.split('');
+    let num = n
+  
+    let absoluteNumber = Math.abs(num); 
+  
+    numberToString = String(absoluteNumber);
+  
+    let stringToArray = numberToString.split('');
   
     let reverseArray = stringToArray.reverse();
   
-    let arrayToString = reverseArray.join();
-
-    let stringToNumber = Number(arrayToString);
-
-    let absoluteNumber = Math.abs(stringToNumber);
+    let arrayToString = reverseArray.join('');
   
-    return absoluteNumber
+    let stringToNumber = Number(arrayToString);
+  
+    return stringToNumber
   }
